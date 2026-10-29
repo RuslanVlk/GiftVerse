@@ -115,6 +115,6 @@ function loop(t){let dt=Math.min(.033,(t-last)/1000||0);last=t;update(dt);render
 // Keyboard support for desktop testing
 addEventListener('keydown',e=>{if(e.key==='Escape'){if(modalOpen)closeModal();else if(dialogueOpen){dialogueOpen=false;$('dialogue').style.display='none'}else openModal('Меню',menuHtml())}if(e.key==='1')castEcho();if(e.key==='2'||e.code==='Space')attack();if(e.key==='e'||e.key==='E')interact();if(e.key==='i'||e.key==='I')openModal('Инвентарь',inventoryHtml())});
 // Wait for assets to be ready, then enter gameplay
-const images=Object.values(img).flat().filter(x=>x instanceof HTMLImageElement);let loaded=0;const done=()=>{loaded++;if(loaded>=images.length){setTimeout(()=>$('loading').classList.add('hide'),350)}};images.forEach(i=>{if(i.complete){done()}else{i.onload=done;i.onerror=done}});setTimeout(()=>$('loading').classList.add('hide'),2800);requestAnimationFrame(loop);updateHUD();
+const images=[...Object.values(img).flat(),proceduralAtlas].filter(x=>x instanceof HTMLImageElement);let loaded=0;const done=()=>{loaded++;if(loaded>=images.length){setTimeout(()=>$('loading').classList.add('hide'),350)}};images.forEach(i=>{if(i.complete){done()}else{i.onload=done;i.onerror=done}});setTimeout(()=>$('loading').classList.add('hide'),2800);requestAnimationFrame(loop);updateHUD();
 })();
 </script></body></html>
