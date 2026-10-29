@@ -1,8 +1,9 @@
 GiftVerse procedural researcher source package
 Frames: 264 SVG frames
-Atlas: researcher-atlas.svg (10 columns x 27 rows)
+Atlas: researcher-atlas.png + researcher-atlas.svg (10 columns x 27 rows)
 Canvas: 128x128, transparent background
 Pivot: (64,116)
 Preview: preview.html
+PNG export: 1280x3456; metadata includes pixel coordinates
 Runtime: integrated into the playable GiftVerse HTML prototype
 Art status: procedural vector pass with costume, gear, book, face details and pose-specific motion; still requires visual review against the supplied reference before production sign-off.
