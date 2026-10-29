@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "characterId": "researcher",
+  "displayName": "Исследователь",
+  "sourceOfTruth": "user-supplied character reference",
+  "rendering": {
+    "projection": "top-down-isometric-2d",
+    "background": "transparent",
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "pivot": {
+      "x": 64,
+      "y": 116,
+      "description": "feet contact point; keep identical in every frame"
+    },
+    "directions": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "colorMode": "RGBA"
+  },
+  "visualLock": [
+    "Keep the same young dark-haired male researcher in every frame.",
+    "Preserve the dark long coat/cloak with blue and gold accents, straps, bags, and scientific equipment from the reference.",
+    "Keep silhouette, face, hair, outfit, and equipment consistent between frames.",
+    "Use the supplied reference as the source of truth; do not redesign the character.",
+    "No background, UI, text, shadows baked into the background, or environment pixels."
+  ],
+  "animationDefaults": {
+    "fps": 10,
+    "loop": true,
+    "frameOrder": "chronological"
+  },
+  "animations": {
+    "idle": {
+      "frames": 6,
+      "fps": 6,
+      "loop": true,
+      "purpose": "subtle breathing and cloth/equipment movement"
+    },
+    "walk": {
+      "frames": 8,
+      "fps": 10,
+      "loop": true,
+      "purpose": "grounded walking cycle; feet must not slide"
+    },
+    "run": {
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "purpose": "faster grounded movement cycle"
+    },
+    "attack": {
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "purpose": "physical attack; clear wind-up, strike, recovery"
+    },
+    "echoCast": {
+      "frames": 10,
+      "fps": 10,
+      "loop": false,
+      "purpose": "search pulse that reveals traces; not an attack"
+    },
+    "interact": {
+      "frames": 6,
+      "fps": 8,
+      "loop": false,
+      "purpose": "approach-facing gesture to NPC/object"
+    },
+    "hit": {
+      "frames": 4,
+      "fps": 12,
+      "loop": false,
+      "purpose": "brief damage reaction, then return to locomotion"
+    }
+  },
+  "delivery": {
+    "image": "researcher-spritesheet.png",
+    "atlas": "researcher-atlas.json",
+    "perFrameDirectory": "frames/",
+    "requiredMetadata": [
+      "animation",
+      "direction",
+      "index",
+      "x",
+      "y",
+      "width",
+      "height",
+      "pivotX",
+      "pivotY"
+    ]
+  },
+  "status": "specification-only; source sprite frames have not yet been generated or integrated"
+}
