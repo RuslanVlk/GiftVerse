@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "characterId": "researcher",
+  "source": "procedural SVG geometry; not extracted from reference images",
+  "referencePolicy": "Use user-supplied reference as design authority; revise SVG paths and proportions against it.",
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "pivot": {
+    "x": 64,
+    "y": 116
+  },
+  "directions": [
+    "down",
+    "left",
+    "right",
+    "up"
+  ],
+  "animations": {
+    "idle": {
+      "count": 6,
+      "fps": 6,
+      "loop": true
+    },
+    "walk": {
+      "count": 8,
+      "fps": 10,
+      "loop": true
+    },
+    "run": {
+      "count": 8,
+      "fps": 12,
+      "loop": true
+    },
+    "attack": {
+      "count": 8,
+      "fps": 12,
+      "loop": false
+    },
+    "echoCast": {
+      "count": 10,
+      "fps": 10,
+      "loop": false
+    },
+    "interact": {
+      "count": 6,
+      "fps": 8,
+      "loop": false
+    },
+    "menuEnter": {
+      "count": 8,
+      "fps": 10,
+      "loop": false
+    },
+    "hit": {
+      "count": 4,
+      "fps": 12,
+      "loop": false
+    },
+    "death": {
+      "count": 8,
+      "fps": 8,
+      "loop": false
+    }
+  },
+  "frames": {
+    "idle": 24,
+    "walk": 32,
+    "run": 32,
+    "attack": 32,
+    "echoCast": 40,
+    "interact": 24,
+    "menuEnter": 32,
+    "hit": 16,
+    "death": 32
+  },
+  "totalFrames": 264,
+  "exportNotes": "SVG frames are generated locally. For PNG atlases use a rasterizer such as resvg or sharp; no external image is embedded."
+}
