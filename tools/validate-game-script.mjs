@@ -4,14 +4,15 @@ import vm from "node:vm";
 
 const htmlPath = "index.html";
 const html = fs.readFileSync(htmlPath, "utf8");
-const scripts = [...html.matchAll(/<script(?![^>]*\\bsrc=)(?![^>]*\\btype=["']module["'])[^>]*>([\\s\\S]*?)<\\/script>/gi)];
+const scripts = [...html.matchAll(/<script\\b([^>]*)>([\\s\\S]*?)<\\/script>/gi)]
+  .filter(match => !/\\bsrc\\s*=/.test(match[1]) && !/\\btype\\s*=\\s*["']module["']/.test(match[1]));
 if (!scripts.length) {
   console.error("No inline game script found in index.html.");
   process.exit(1);
 }
 let checked = 0;
 for (const match of scripts) {
-  const source = match[1].trim();
+  const source = match[2].trim();
   if (!source) continue;
   try {
     new vm.Script(source, { filename: htmlPath });
