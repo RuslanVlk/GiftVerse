@@ -55,7 +55,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Build procedural researcher SVG animation frames"
-          file_pattern: "assets/characters/researcher/procedural/frames/** assets/characters/researcher/procedural/researcher-atlas.json assets/characters/researcher/procedural/researcher-atlas.svg assets/characters/researcher/procedural/BUILD-INFO.txt"
+          file_pattern: "assets/characters/researcher/procedural/frames/** assets/characters/researcher/procedural/manifest.json assets/characters/researcher/procedural/researcher-atlas.json assets/characters/researcher/procedural/researcher-atlas.svg assets/characters/researcher/procedural/BUILD-INFO.txt"
       - name: Validate embedded researcher frames
         run: node tools/validate-researcher-source.mjs
       - name: Check ES module syntax
