@@ -12,7 +12,10 @@ const errors=[];
 const expected=Object.values(manifest.animations).reduce((n,a)=>n+a.count*manifest.directions.length,0);
 if(atlas.frameCount!==expected)errors.push(`Atlas declares ${atlas.frameCount} frames; expected ${expected}.`);
 if(atlas.frames.length!==expected)errors.push(`Atlas contains ${atlas.frames.length} metadata entries; expected ${expected}.`);
-if(atlas.format!=="svg-atlas"||atlas.atlasSvg!=="researcher-atlas.svg")errors.push("Atlas format/path mismatch.");
+if(atlas.format!=="png+svg-atlas"||atlas.atlasSvg!=="researcher-atlas.svg"||atlas.atlasPng!=="researcher-atlas.png")errors.push("Atlas format/path mismatch.");
+const pngPath=path.join(base,"researcher-atlas.png");
+if(!fs.existsSync(pngPath))errors.push("Rasterized PNG atlas is missing.");
+else {const png=fs.readFileSync(pngPath);if(png.subarray(0,8).toString("hex")!=="89504e470d0a1a0a")errors.push("PNG atlas has invalid signature.");if(png.readUInt32BE(16)!==atlas.columns*atlas.frameWidth||png.readUInt32BE(20)!==atlas.rows*atlas.frameHeight)errors.push("PNG atlas dimensions do not match metadata.");}
 if(!atlasSvg.startsWith('<svg xmlns="http://www.w3.org/2000/svg"'))errors.push("Packed atlas is not a valid SVG root.");
 if(!atlasSvg.includes(`width="${atlas.columns*atlas.frameWidth}"`)||!atlasSvg.includes(`height="${atlas.rows*atlas.frameHeight}"`))errors.push("Packed atlas dimensions do not match metadata.");
 const keys=new Set();
