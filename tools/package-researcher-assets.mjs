@@ -20,7 +20,20 @@ for(const [animation,spec] of Object.entries(manifest.animations)){
 }
 const expected=Object.values(manifest.animations).reduce((n,a)=>n+a.count*manifest.directions.length,0);
 if(entries.length!==expected) throw new Error("Frame count mismatch: expected "+expected+", got "+entries.length);
-const atlas={schemaVersion:1,characterId:"researcher",format:"svg-frames",frameWidth:128,frameHeight:128,pivotX:64,pivotY:116,directions:manifest.directions,animations:manifest.animations,frameCount:entries.length,frames:entries};
+const columns=10,rows=Math.ceil(entries.length/columns);
+const cells=[];
+for(let i=0;i<entries.length;i++){
+  const entry=entries[i];
+  const svg=fs.readFileSync(path.join(root,entry.file),"utf8");
+  let inner=svg.slice(svg.indexOf(">")+1,svg.lastIndexOf("</svg>"));
+  for(const id of ["coat","gold","orb","skin","glow"]){
+    inner=inner.replaceAll('id="'+id+'"','id="'+id+"_"+i+'"').replaceAll("url(#"+id+")","url(#"+id+"_"+i+")");
+  }
+  cells.push('<svg x="'+(i%columns*128)+'" y="'+(Math.floor(i/columns)*128)+'" width="128" height="128" viewBox="0 0 128 128">'+inner+'</svg>');
+}
+const atlasSvg='<svg xmlns="http://www.w3.org/2000/svg" width="'+(columns*128)+'" height="'+(rows*128)+'" viewBox="0 0 '+(columns*128)+' '+(rows*128)+'">'+cells.join("")+'</svg>';
+fs.writeFileSync(path.join(root,"researcher-atlas.svg"),atlasSvg);
+const atlas={schemaVersion:1,characterId:"researcher",format:"svg-atlas",atlasSvg:"researcher-atlas.svg",columns,rows,frameWidth:128,frameHeight:128,pivotX:64,pivotY:116,directions:manifest.directions,animations:manifest.animations,frameCount:entries.length,frames:entries.map((e,i)=>({...e,atlasIndex:i,atlasX:(i%columns)*128,atlasY:Math.floor(i/columns)*128}))};
 fs.writeFileSync(path.join(root,"researcher-atlas.json"),JSON.stringify(atlas,null,2)+"\n");
-fs.writeFileSync(path.join(root,"BUILD-INFO.txt"),"GiftVerse procedural researcher source package\nFrames: "+entries.length+" SVG frames\nCanvas: 128x128, transparent background\nPivot: (64,116)\nPreview: preview.html\n\nThis is an initial procedural geometry pass, not final reference-matched art. Review silhouette, face, coat, equipment and animation before live game integration.\n");
-console.log("Validated and indexed "+entries.length+" generated SVG frames.");
+fs.writeFileSync(path.join(root,"BUILD-INFO.txt"),"GiftVerse procedural researcher source package\nFrames: "+entries.length+" SVG frames\nAtlas: researcher-atlas.svg ("+columns+" columns x "+rows+" rows)\nCanvas: 128x128, transparent background\nPivot: (64,116)\nPreview: preview.html\n\nThis is an initial procedural geometry pass, not final reference-matched art. Review silhouette, face, coat, equipment and animation before live game integration.\n");
+console.log("Validated and packed "+entries.length+" generated SVG frames into "+columns+"x"+rows+" atlas.");
