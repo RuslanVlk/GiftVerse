@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - "README.md"
       - "index.html"
       - "assets/characters/researcher/procedural/**"
       - ".github/workflows/deploy-playtest.yml"
