@@ -1,6 +1,6 @@
 GiftVerse procedural researcher source package
-Frames: 200 SVG frames
-Atlas: researcher-atlas.svg (10 columns x 20 rows)
+Frames: 264 SVG frames
+Atlas: researcher-atlas.svg (10 columns x 27 rows)
 Canvas: 128x128, transparent background
 Pivot: (64,116)
 Preview: preview.html
