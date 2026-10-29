@@ -24,7 +24,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -33,7 +33,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          persist-credentials: false
+          persist-credentials: true
       - name: Set up Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
@@ -51,6 +51,11 @@ jobs:
           path: assets/characters/researcher/procedural/
           if-no-files-found: error
           retention-days: 14
+      - name: Commit generated procedural frames
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Build procedural researcher SVG animation frames"
+          file_pattern: "assets/characters/researcher/procedural/frames/** assets/characters/researcher/procedural/researcher-atlas.json assets/characters/researcher/procedural/BUILD-INFO.txt"
       - name: Validate embedded researcher frames
         run: node tools/validate-researcher-source.mjs
       - name: Check ES module syntax
