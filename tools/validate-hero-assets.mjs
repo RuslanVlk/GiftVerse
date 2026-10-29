@@ -74,9 +74,26 @@ if (frames) {
     : manifest.rendering.directions;
   for (const [animation, spec] of Object.entries(animationsToCheck)) {
     for (const direction of directionsToCheck) {
-      for (let index = 0; index < spec.frames; index++) {
-        if (!keys.has(`${animation}/${direction}/${index}`)) {
-          fail(`Missing frame: ${animation}/${direction}/${index}`);
+      if (sourceOnly) {
+        const indexes = frames
+          .filter(frame => frame.animation === animation && frame.direction === direction)
+          .map(frame => frame.index)
+          .sort((a, b) => a - b);
+        if (!indexes.length) {
+          fail(`Source atlas declares ${animation}/${direction} but contains no frames.`);
+          continue;
+        }
+        indexes.forEach((index, position) => {
+          if (index !== position) fail(`Source frames for ${animation}/${direction} must use contiguous indexes starting at 0.`);
+        });
+        if (indexes.length < spec.frames) {
+          warnings.push(`Source animation ${animation}/${direction} has ${indexes.length} frame(s); production target is ${spec.frames}.`);
+        }
+      } else {
+        for (let index = 0; index < spec.frames; index++) {
+          if (!keys.has(`${animation}/${direction}/${index}`)) {
+            fail(`Missing frame: ${animation}/${direction}/${index}`);
+          }
         }
       }
     }
