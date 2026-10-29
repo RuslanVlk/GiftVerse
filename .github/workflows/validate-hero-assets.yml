@@ -6,7 +6,7 @@ on:
       - "index.html"
       - "tools/validate-game-script.mjs"
       - "tools/generate-researcher-svg.mjs"
-      - "tools/package-researcher-assets.mjs"
+      - "tools/package-researcher-assets.mjs"\n      - "tools/validate-procedural-atlas.mjs"
       - "assets/characters/researcher/**"
       - "tools/validate-hero-assets.mjs"
       - "tools/validate-researcher-source.mjs"
