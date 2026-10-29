@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "characterId": "researcher",
-  "format": "svg-atlas",
+  "format": "png+svg-atlas",
   "atlasSvg": "researcher-atlas.svg",
   "columns": 10,
   "rows": 27,
@@ -4024,5 +4024,8 @@
       "atlasX": 384,
       "atlasY": 3328
     }
-  ]
+  ],
+  "atlasPng": "researcher-atlas.png",
+  "pngWidth": 1280,
+  "pngHeight": 3456
 }
