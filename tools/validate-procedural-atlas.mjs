@@ -28,7 +28,7 @@ for(let i=0;i<atlas.frames.length;i++){
  if(f.atlasX!==(i%atlas.columns)*atlas.frameWidth||f.atlasY!==Math.floor(i/atlas.columns)*atlas.frameHeight)errors.push(`Atlas coordinates mismatch at ${key}.`);
  if(!manifest.animations[f.animation])errors.push(`Unknown animation: ${f.animation}`);
  if(!manifest.directions.includes(f.direction))errors.push(`Unknown direction: ${f.direction}`);
- const file=path.join(base,f.file.replace(/^frames\\//,"frames/"));
+ const file=path.join(base,f.file);
  if(!fs.existsSync(file))errors.push(`Missing frame file: ${f.file}`);
  else {
   const svg=fs.readFileSync(file,"utf8");
