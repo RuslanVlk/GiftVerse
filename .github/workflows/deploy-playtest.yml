@@ -1,13 +1,6 @@
 name: Deploy GiftVerse playtest
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "index.html"
-      - "assets/characters/researcher/**"
-      - ".github/workflows/deploy-playtest.yml"
   workflow_dispatch:
 
 permissions:
