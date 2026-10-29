@@ -9,7 +9,6 @@ on:
       - "tools/package-researcher-assets.mjs"
       - "tools/rasterize-researcher-atlas.mjs"
       - "tools/validate-procedural-atlas.mjs"
-      - "tools/validate-procedural-atlas.mjs"
       - "assets/characters/researcher/**"
       - "tools/validate-hero-assets.mjs"
       - "tools/validate-researcher-source.mjs"
