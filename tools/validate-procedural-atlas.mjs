@@ -28,8 +28,15 @@ for(let i=0;i<atlas.frames.length;i++){
  if(f.atlasX!==(i%atlas.columns)*atlas.frameWidth||f.atlasY!==Math.floor(i/atlas.columns)*atlas.frameHeight)errors.push(`Atlas coordinates mismatch at ${key}.`);
  if(!manifest.animations[f.animation])errors.push(`Unknown animation: ${f.animation}`);
  if(!manifest.directions.includes(f.direction))errors.push(`Unknown direction: ${f.direction}`);
- const file=path.join(base,f.file.replace(/^frames\//,"frames/"));
+ const file=path.join(base,f.file.replace(/^frames\\//,"frames/"));
  if(!fs.existsSync(file))errors.push(`Missing frame file: ${f.file}`);
+ else {
+  const svg=fs.readFileSync(file,"utf8");
+  if(!svg.startsWith("<svg")||!svg.includes('viewBox="0 0 128 128"')||!svg.endsWith("</svg>"))errors.push(`Invalid SVG structure: ${f.file}`);
+  if(/<image\\b/i.test(svg)||/data:image\\//i.test(svg))errors.push(`Embedded bitmap detected in procedural frame: ${f.file}`);
+  if(!svg.includes('aria-label="Researcher '))errors.push(`Missing accessible frame label: ${f.file}`);
+  if(f.width!==128||f.height!==128||f.pivotX!==64||f.pivotY!==116)errors.push(`Frame dimensions or pivot mismatch: ${f.file}`);
+ }
 }
 for(const [animation,spec] of Object.entries(manifest.animations)){
  for(const direction of manifest.directions){
