@@ -5,7 +5,7 @@ on:
     paths:
       - "index.html"
       - "tools/validate-game-script.mjs"
-      - "tools/generate-researcher-svg.mjs"
+      - "tools/generate-researcher-svg.mjs"\n      - "tools/package-researcher-assets.mjs"
       - "assets/characters/researcher/**"
       - "tools/validate-hero-assets.mjs"
       - "tools/validate-researcher-source.mjs"
@@ -39,7 +39,7 @@ jobs:
         run: node tools/validate-game-script.mjs
       - name: Generate procedural researcher frames
         run: node tools/generate-researcher-svg.mjs
-      - name: Validate embedded researcher frames
+      - name: Package and validate procedural frames\n        run: node tools/package-researcher-assets.mjs\n      - name: Upload generated researcher source package\n        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808\n        with:\n          name: giftverse-researcher-procedural-source\n          path: assets/characters/researcher/procedural/\n          if-no-files-found: error\n          retention-days: 14\n      - name: Validate embedded researcher frames
         run: node tools/validate-researcher-source.mjs
       - name: Check ES module syntax
         run: node --input-type=module --check < assets/characters/researcher/researcher-assets.js
