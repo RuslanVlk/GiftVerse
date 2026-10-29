@@ -33,7 +33,7 @@ for(let i=0;i<atlas.frames.length;i++){
  else {
   const svg=fs.readFileSync(file,"utf8");
   if(!svg.startsWith("<svg")||!svg.includes('viewBox="0 0 128 128"')||!svg.endsWith("</svg>"))errors.push(`Invalid SVG structure: ${f.file}`);
-  if(/<image\\b/i.test(svg)||/data:image\\//i.test(svg))errors.push(`Embedded bitmap detected in procedural frame: ${f.file}`);
+  if(svg.includes("<image ")||svg.includes("<image>")||svg.includes("data:image/"))errors.push(`Embedded bitmap detected in procedural frame: ${f.file}`);
   if(!svg.includes('aria-label="Researcher '))errors.push(`Missing accessible frame label: ${f.file}`);
   if(f.width!==128||f.height!==128||f.pivotX!==64||f.pivotY!==116)errors.push(`Frame dimensions or pivot mismatch: ${f.file}`);
  }
