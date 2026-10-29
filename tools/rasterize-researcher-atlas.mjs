@@ -20,4 +20,7 @@ atlas.atlasPng="researcher-atlas.png";
 atlas.pngWidth=width;
 atlas.pngHeight=height;
 fs.writeFileSync(jsonPath,JSON.stringify(atlas,null,2)+"\n");
+const infoPath=path.join(root,"BUILD-INFO.txt");
+const buildInfo=fs.readFileSync(infoPath,"utf8").replace("Atlas: researcher-atlas.svg (","Atlas: researcher-atlas.png + researcher-atlas.svg (");
+fs.writeFileSync(infoPath,buildInfo.replace("Runtime: integrated","PNG export: "+width+"x"+height+"; metadata includes pixel coordinates\nRuntime: integrated"));
 console.log(`Rasterized researcher atlas to PNG: ${width}x${height}, ${png.length} bytes.`);
