@@ -81,7 +81,16 @@ const state=player.deathT>0?'death':player.hitT>0?'hit':player.attackT>0?'attack
 const angle=((player.dir%(Math.PI*2))+Math.PI*2)%(Math.PI*2);
 const direction=angle<Math.PI/4||angle>=Math.PI*7/4?'right':angle<Math.PI*3/4?'down':angle<Math.PI*5/4?'left':'up';
 const frameCounts=proceduralFrameCounts;
-let frame=state==='idle'?Math.floor(time*6)%6:state==='walk'?Math.floor(time*10)%8:state==='attack'?Math.min(7,Math.floor((1-player.attackT/.48)*8)):state==='echoCast'?Math.min(9,Math.floor((1-player.echoT/1.05)*10)):state==='hit'?Math.min(3,Math.floor((.3-player.hitT)/.3*4)):0;
+let frame=0;
+if(state==='idle')frame=Math.floor(time*6)%6;
+else if(state==='walk')frame=Math.floor(time*10)%8;
+else if(state==='run')frame=Math.floor(time*12)%8;
+else if(state==='attack')frame=Math.min(7,Math.floor((1-player.attackT/.48)*8));
+else if(state==='echoCast')frame=Math.min(9,Math.floor((1-player.echoT/1.05)*10));
+else if(state==='interact')frame=Math.floor(time*8)%6;
+else if(state==='menuEnter')frame=Math.floor(time*10)%8;
+else if(state==='hit')frame=Math.min(3,Math.floor((.3-player.hitT)/.3*4));
+else if(state==='death')frame=Math.min(7,Math.floor((.8-player.deathT)/.8*8));
 frame=Math.max(0,Math.min(frameCounts[state]-1,frame));
 let atlasIndex=0;for(const animation of proceduralAnimationOrder){if(animation===state)break;atlasIndex+=proceduralFrameCounts[animation]*proceduralDirectionOrder.length}atlasIndex+=proceduralDirectionOrder.indexOf(direction)*proceduralFrameCounts[state]+frame;
 const atlasX=(atlasIndex%10)*128,atlasY=Math.floor(atlasIndex/10)*128;
