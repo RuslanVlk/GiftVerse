@@ -18,8 +18,16 @@ export function loadHeroAnimation(animation = "idle") {
   })));
 }
 
+const loadedAnimations = new Map();
+export function getHeroAnimation(animation = "idle") {
+  if (!loadedAnimations.has(animation)) {
+    loadedAnimations.set(animation, loadHeroAnimation(animation));
+  }
+  return loadedAnimations.get(animation);
+}
+
 export async function drawHeroFrame(ctx, animation, frameIndex, x, groundY, height = 88, flipX = false) {
-  const frames = await loadHeroAnimation(animation);
+  const frames = await getHeroAnimation(animation);
   const entry = frames[((frameIndex % frames.length) + frames.length) % frames.length];
   const { image } = entry;
   const width = image.naturalWidth * (height / image.naturalHeight);
