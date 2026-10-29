@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GiftVerse — проверка кадров исследователя</title>
+<style>
+:root{color-scheme:dark;--bg:#08121d;--panel:#101e2b;--line:#344858;--text:#eaf1f5;--muted:#9eb1bf;--accent:#79e4f0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172c3c,var(--bg) 70%);color:var(--text);font:14px system-ui,sans-serif;min-height:100vh;padding:20px}
+main{max-width:980px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}h1{font-size:clamp(20px,4vw,30px);margin:0 0 6px}.muted{color:var(--muted)}.panel{border:1px solid var(--line);background:#0b1723d9;border-radius:16px;padding:16px;margin-top:14px}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,280px);gap:14px}.canvas-wrap{border:1px solid var(--line);border-radius:12px;overflow:hidden;background-color:#111d28;background-image:linear-gradient(45deg,#192733 25%,transparent 25%),linear-gradient(-45deg,#192733 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#192733 75%),linear-gradient(-45deg,transparent 75%,#192733 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
+canvas{display:block;width:100%;height:360px}label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}select,button,input{font:inherit;color:var(--text);background:#172838;border:1px solid #3b5265;border-radius:9px;padding:9px}button{cursor:pointer}button:hover{border-color:var(--accent)}.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.controls>*{flex:0 0 auto}.field{margin-bottom:14px}.field select{width:100%}.frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(82px,1fr));gap:8px}.frame{background:#111f2b;border:1px solid var(--line);border-radius:10px;padding:6px;min-width:0}.frame.active{border-color:var(--accent);box-shadow:0 0 0 1px #79e4f055}.frame canvas{height:100px;width:100%}.frame small{display:block;text-align:center;color:var(--muted);overflow-wrap:anywhere}.badge{display:inline-block;border:1px solid #3d586a;border-radius:99px;padding:4px 8px;color:var(--accent);font-size:12px}.warning{color:#e7c782;line-height:1.5}.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}.stat{background:#10202d;border-radius:10px;padding:10px}.stat strong{display:block;font-size:18px}.stat span{color:var(--muted);font-size:12px}
+@media(max-width:680px){body{padding:12px}.stage{grid-template-columns:1fr}canvas{height:300px}.panel{padding:12px}}
+</style>
+</head>
+<body><main>
+<div class="top"><div><h1>Исследователь — проверка анимаций</h1><div class="muted">Изолированный просмотр игровых кадров · карта и интерфейс игры не загружаются</div></div><span id="status" class="badge">Загрузка кадров…</span></div>
+<section class="panel stage">
+<div>
+<div class="canvas-wrap"><canvas id="stage" width="640" height="360"></canvas></div>
+<div class="controls" style="margin-top:10px">
+<button id="toggle">Пауза</button><button id="prev">← Кадр</button><button id="next">Кадр →</button>
+<label style="margin:0 0 0 6px">Скорость <select id="fps"><option value="4">4 FPS</option><option value="6" selected>6 FPS</option><option value="8">8 FPS</option><option value="10">10 FPS</option><option value="12">12 FPS</option></select></label>
+<label style="margin:0 0 0 6px"><input id="flip" type="checkbox"> Отразить</label>
+</div>
+</div>
+<div>
+<div class="field"><label for="animation">Анимация</label><select id="animation"><option value="idle">Idle — ожидание</option><option value="attack">Attack — атака</option></select></div>
+<div class="stats"><div class="stat"><strong id="frameCount">—</strong><span>Кадров в цикле</span></div><div class="stat"><strong id="dimensions">—</strong><span>Размер текущего кадра</span></div><div class="stat"><strong id="frameIndex">—</strong><span>Индекс кадра</span></div><div class="stat"><strong id="elapsed">—</strong><span>Режим просмотра</span></div></div>
+<p class="warning">Важно: это просмотр уже существующих кадров из старого прототипа. Он помогает проверить прозрачность и последовательность, но не означает, что все анимации и четыре направления уже готовы.</p>
+</div>
+</section>
+<section class="panel"><div class="top"><h2 style="font-size:17px;margin:0">Кадры цикла</h2><span class="muted">Нажми на кадр, чтобы перейти к нему</span></div><div id="frames" class="frames" style="margin-top:12px"></div></section>
+</main>
+<script type="module">
+import { getHeroAnimation } from "./researcher-assets.js";
+const $=id=>document.getElementById(id),canvas=$("stage"),ctx=canvas.getContext("2d");
+let frames=[],index=0,playing=true,last=0,acc=0,animation="idle";
+function drawOne(c,entry,height=100){const x=c.getContext("2d"),im=entry.image,w=im.naturalWidth*(height/im.naturalHeight);x.clearRect(0,0,c.width,c.height);x.save();x.translate(c.width/2,c.height-14);if($("flip").checked)x.scale(-1,1);x.drawImage(im,-w/2,-height,w,height);x.restore()}
+function render(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.save();ctx.strokeStyle="#5d7b8d";ctx.setLineDash([5,6]);ctx.beginPath();ctx.moveTo(0,canvas.height-20);ctx.lineTo(canvas.width,canvas.height-20);ctx.stroke();ctx.restore();if(!frames.length)return;drawOne(canvas,frames[index],230);$("frameCount").textContent=frames.length;$("dimensions").textContent=frames[index].image.naturalWidth+"×"+frames[index].image.naturalHeight;$("frameIndex").textContent=(index+1)+" / "+frames.length;$("elapsed").textContent=playing?"Воспроизведение":"Пауза";$("toggle").textContent=playing?"Пауза":"Продолжить";$("status").textContent=animation==="idle"?"Idle загружен":"Attack загружен";document.querySelectorAll(".frame").forEach((el,i)=>el.classList.toggle("active",i===index))}
+function renderStrip(){const box=$("frames");box.replaceChildren();frames.forEach((f,i)=>{const el=document.createElement("button");el.className="frame";el.type="button";const c=document.createElement("canvas");c.width=100;c.height=120;drawOne(c,f,86);const cap=document.createElement("small");cap.textContent=(i+1)+". "+f.name;el.append(c,cap);el.addEventListener("click",()=>{index=i;render()});box.append(el)})}
+async function setAnimation(name){animation=name;index=0;playing=true;frames=await getHeroAnimation(name);renderStrip();render()}
+$("animation").addEventListener("change",e=>setAnimation(e.target.value));$("toggle").addEventListener("click",()=>{playing=!playing;render()});$("prev").addEventListener("click",()=>{index=(index+frames.length-1)%frames.length;render()});$("next").addEventListener("click",()=>{index=(index+1)%frames.length;render()});$("flip").addEventListener("change",render);
+$("fps").addEventListener("change",()=>{acc=0});
+function loop(t){if(!last)last=t;const dt=Math.min(.1,(t-last)/1000);last=t;if(playing){acc+=dt;if(acc>=1/Number($("fps").value)){index=(index+1)%frames.length;acc=0;render()}}requestAnimationFrame(loop)}
+try{await setAnimation(animation);requestAnimationFrame(loop)}catch(e){$("status").textContent="Ошибка";console.error(e)}
+</script></body></html>
