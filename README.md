@@ -1,36 +1,32 @@
 # GiftVerse
 
-A 2D RPG project.
+A 2D RPG prototype with the current milestone focused on the main researcher character and animation system.
 
-## Current milestone: main hero and animation
+## Playable prototype
 
-The current milestone focuses exclusively on the main playable character and his animation system. Keep the existing map and environment unchanged. Leave the game interface out of scope for now.
+The root `index.html` contains the existing browser-playable prototype. It includes tap-to-move navigation, the forest map, Orin dialogue, the EchoCast trace-search mechanic, combat with the forest guardian, HUD, and local progress saving.
 
-### Required animation states
+The map and environment are intentionally out of scope for the current character-animation milestone.
 
-- Idle
-- Walk
-- Run
-- Attack
-- Hit
-- Interact
-- EchoCast — a quest-search ability used to reveal traces; it is not an attack.
+## Character animation workbench
 
-### Movement
+Open `assets/characters/researcher/preview.html` through a static web server to inspect and export the currently embedded source frames. The preview supports frame-by-frame inspection, playback speed, horizontal flip, PNG spritesheet export, and JSON atlas export.
 
-The intended control scheme is tap-to-move.
+The current embedded game assets contain source frames for **Idle** and **Attack** only. They do not constitute the full production set. Walk, Run, EchoCast character poses, Interact, Hit, and all four directional sets still require proper art frames matching the supplied researcher reference.
 
-### Art direction
+Exports from the preview are explicitly marked `sourceOnly: true`. They are useful as source atlases and should not be mistaken for a complete production atlas.
 
-Use the supplied character reference as the visual source of truth for silhouette, outfit, equipment, palette, and effects. Build proper 2D game assets and animation frames. Do not paste cropped reference images into the game as finished assets, and do not substitute primitive geometric placeholders for the hero.
+## Requirements
 
-### Quality requirements
+- **Tap-to-move** remains the movement scheme.
+- Keep the existing map, environment, and interface unchanged during the character milestone.
+- Preserve the researcher reference: dark hair, dark long coat/cloak, blue and gold accents, straps, bags, and scientific equipment.
+- Keep transparent RGBA frames and a stable feet pivot at (64, 116) in 128×128 cells.
+- **EchoCast** is a search ability that reveals traces, not an attack.
+- Do not use cropped reference art or primitive geometric placeholders as final character art.
 
-- Preserve the existing environment and map during this milestone.
-- Keep character proportions, outfit, and equipment consistent between animation frames.
-- Make animation assets usable in the actual game project, not just as a concept image.
-- Verify changes in the running project before claiming they work.
+## Validation
 
-## Status
+GitHub Actions checks the embedded source frames, ES module syntax, and the inline JavaScript syntax in the playable prototype.
 
-Repository initialized with the current milestone and requirements. Source project files still need to be added.
+The checks confirm code and source-data integrity; they do not claim that the missing production animation frames have been completed or that visual gameplay has been manually verified on every device.
