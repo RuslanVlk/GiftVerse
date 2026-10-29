@@ -29,9 +29,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b
+        uses: actions/configure-pages@v5
       - name: Upload playtest site
-        uses: actions/upload-pages-artifact@7b1f4a764d45d2f9f8c4a6c5d5d8b4f1c0f2b7a9
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
       - name: Deploy to GitHub Pages
