@@ -7,6 +7,7 @@ on:
       - "tools/validate-game-script.mjs"
       - "tools/generate-researcher-svg.mjs"
       - "tools/package-researcher-assets.mjs"
+      - "tools/rasterize-researcher-atlas.mjs"
       - "tools/validate-procedural-atlas.mjs"
       - "tools/validate-procedural-atlas.mjs"
       - "assets/characters/researcher/**"
@@ -19,6 +20,7 @@ on:
       - "tools/validate-game-script.mjs"
       - "tools/generate-researcher-svg.mjs"
       - "tools/package-researcher-assets.mjs"
+      - "tools/rasterize-researcher-atlas.mjs"
       - "tools/validate-procedural-atlas.mjs"
       - "assets/characters/researcher/**"
       - "tools/validate-hero-assets.mjs"
@@ -47,6 +49,10 @@ jobs:
         run: node tools/generate-researcher-svg.mjs
       - name: Package and validate procedural frames
         run: node tools/package-researcher-assets.mjs
+      - name: Install SVG rasterizer
+        run: npm install --no-save --package-lock=false @resvg/resvg-js
+      - name: Export PNG atlas
+        run: node tools/rasterize-researcher-atlas.mjs
       - name: Validate procedural atlas and runtime integration
         run: node tools/validate-procedural-atlas.mjs
       - name: Upload generated researcher source package
@@ -60,7 +66,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Build procedural researcher SVG animation frames"
-          file_pattern: "assets/characters/researcher/procedural/frames/** assets/characters/researcher/procedural/manifest.json assets/characters/researcher/procedural/researcher-atlas.json assets/characters/researcher/procedural/researcher-atlas.svg assets/characters/researcher/procedural/BUILD-INFO.txt"
+          file_pattern: "assets/characters/researcher/procedural/frames/** assets/characters/researcher/procedural/manifest.json assets/characters/researcher/procedural/researcher-atlas.json assets/characters/researcher/procedural/researcher-atlas.svg assets/characters/researcher/procedural/researcher-atlas.png assets/characters/researcher/procedural/BUILD-INFO.txt"
       - name: Validate procedural-only researcher workflow
         run: node tools/validate-researcher-source.mjs
       - name: Check ES module syntax
