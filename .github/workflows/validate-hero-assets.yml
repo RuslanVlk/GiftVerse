@@ -62,10 +62,28 @@ jobs:
           if-no-files-found: error
           retention-days: 14
       - name: Commit generated procedural frames
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Build procedural researcher SVG animation frames"
-          file_pattern: "assets/characters/researcher/procedural/frames/** assets/characters/researcher/procedural/manifest.json assets/characters/researcher/procedural/researcher-atlas.json assets/characters/researcher/procedural/researcher-atlas.svg assets/characters/researcher/procedural/researcher-atlas.png assets/characters/researcher/procedural/BUILD-INFO.txt"
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/characters/researcher/procedural/frames assets/characters/researcher/procedural/manifest.json assets/characters/researcher/procedural/researcher-atlas.json assets/characters/researcher/procedural/researcher-atlas.svg assets/characters/researcher/procedural/researcher-atlas.png assets/characters/researcher/procedural/BUILD-INFO.txt
+          if git diff --cached --quiet; then
+            echo "Generated assets are already up to date."
+            exit 0
+          fi
+          git commit -m "Build procedural researcher animation atlas"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying after fetching latest main."
+            git fetch origin main
+            sleep 2
+          done
+          echo "Unable to push generated assets after three attempts."
+          exit 1
       - name: Validate procedural-only researcher workflow
         run: node tools/validate-researcher-source.mjs
       - name: Check ES module syntax
