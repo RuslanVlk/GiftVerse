@@ -11,6 +11,8 @@ on:
       - ".github/workflows/validate-hero-assets.yml"
   pull_request:
     paths:
+      - "index.html"
+      - "tools/validate-game-script.mjs"
       - "assets/characters/researcher/**"
       - "tools/validate-hero-assets.mjs"
       - "tools/validate-researcher-source.mjs"
