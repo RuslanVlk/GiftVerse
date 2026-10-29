@@ -34,6 +34,6 @@ The checks confirm code and source-data integrity; they do not claim that the mi
 
 ## Procedural researcher generator
 
-A new first-pass procedural character pipeline is available in `tools/generate-researcher-svg.mjs`. It generates original SVG frames from code rather than cropping the supplied reference image. The output is stored under `assets/characters/researcher/procedural/` and includes seven animation states, four directions, a manifest, and a browser preview.
+The first procedural researcher pass is now integrated into the playable prototype through a single SVG atlas. `tools/generate-researcher-svg.mjs` generates original SVG frames from code rather than cropping the supplied reference image; `tools/package-researcher-assets.mjs` validates and packs the frames. The committed atlas contains 264 frames across nine states (Idle, Walk, Run, Attack, EchoCast, Interact, MenuEnter, Hit, Death) and four directions. GitHub Actions regenerates and validates the atlas and commits the output automatically.
 
-This is a technical starting point, not final production-quality character art. Review the procedural preview against the supplied reference before integrating it into the live game.
+This remains a technical procedural-art pass, not final production-quality art matched to the supplied reference. The renderer is wired into gameplay, but the silhouette, anatomy, costume detail and movement still require visual refinement before the character can be considered finished. The reference image is a design authority only; it is not cropped into a character sprite.
