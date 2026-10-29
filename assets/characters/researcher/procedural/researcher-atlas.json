@@ -1,7 +1,10 @@
 {
   "schemaVersion": 1,
   "characterId": "researcher",
-  "format": "svg-frames",
+  "format": "svg-atlas",
+  "atlasSvg": "researcher-atlas.svg",
+  "columns": 10,
+  "rows": 20,
   "frameWidth": 128,
   "frameHeight": 128,
   "pivotX": 64,
@@ -61,7 +64,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 0,
+      "atlasX": 0,
+      "atlasY": 0
     },
     {
       "animation": "idle",
@@ -73,7 +79,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 1,
+      "atlasX": 128,
+      "atlasY": 0
     },
     {
       "animation": "idle",
@@ -85,7 +94,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 2,
+      "atlasX": 256,
+      "atlasY": 0
     },
     {
       "animation": "idle",
@@ -97,7 +109,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 3,
+      "atlasX": 384,
+      "atlasY": 0
     },
     {
       "animation": "idle",
@@ -109,7 +124,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 4,
+      "atlasX": 512,
+      "atlasY": 0
     },
     {
       "animation": "idle",
@@ -121,7 +139,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 5,
+      "atlasX": 640,
+      "atlasY": 0
     },
     {
       "animation": "idle",
@@ -133,7 +154,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 6,
+      "atlasX": 768,
+      "atlasY": 0
     },
     {
       "animation": "idle",
@@ -145,7 +169,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 7,
+      "atlasX": 896,
+      "atlasY": 0
     },
     {
       "animation": "idle",
@@ -157,7 +184,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 8,
+      "atlasX": 1024,
+      "atlasY": 0
     },
     {
       "animation": "idle",
@@ -169,7 +199,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 9,
+      "atlasX": 1152,
+      "atlasY": 0
     },
     {
       "animation": "idle",
@@ -181,7 +214,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 10,
+      "atlasX": 0,
+      "atlasY": 128
     },
     {
       "animation": "idle",
@@ -193,7 +229,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 11,
+      "atlasX": 128,
+      "atlasY": 128
     },
     {
       "animation": "idle",
@@ -205,7 +244,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 12,
+      "atlasX": 256,
+      "atlasY": 128
     },
     {
       "animation": "idle",
@@ -217,7 +259,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 13,
+      "atlasX": 384,
+      "atlasY": 128
     },
     {
       "animation": "idle",
@@ -229,7 +274,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 14,
+      "atlasX": 512,
+      "atlasY": 128
     },
     {
       "animation": "idle",
@@ -241,7 +289,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 15,
+      "atlasX": 640,
+      "atlasY": 128
     },
     {
       "animation": "idle",
@@ -253,7 +304,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 16,
+      "atlasX": 768,
+      "atlasY": 128
     },
     {
       "animation": "idle",
@@ -265,7 +319,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 17,
+      "atlasX": 896,
+      "atlasY": 128
     },
     {
       "animation": "idle",
@@ -277,7 +334,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 18,
+      "atlasX": 1024,
+      "atlasY": 128
     },
     {
       "animation": "idle",
@@ -289,7 +349,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 19,
+      "atlasX": 1152,
+      "atlasY": 128
     },
     {
       "animation": "idle",
@@ -301,7 +364,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 20,
+      "atlasX": 0,
+      "atlasY": 256
     },
     {
       "animation": "idle",
@@ -313,7 +379,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 21,
+      "atlasX": 128,
+      "atlasY": 256
     },
     {
       "animation": "idle",
@@ -325,7 +394,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 22,
+      "atlasX": 256,
+      "atlasY": 256
     },
     {
       "animation": "idle",
@@ -337,7 +409,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 6,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 23,
+      "atlasX": 384,
+      "atlasY": 256
     },
     {
       "animation": "walk",
@@ -349,7 +424,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 24,
+      "atlasX": 512,
+      "atlasY": 256
     },
     {
       "animation": "walk",
@@ -361,7 +439,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 25,
+      "atlasX": 640,
+      "atlasY": 256
     },
     {
       "animation": "walk",
@@ -373,7 +454,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 26,
+      "atlasX": 768,
+      "atlasY": 256
     },
     {
       "animation": "walk",
@@ -385,7 +469,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 27,
+      "atlasX": 896,
+      "atlasY": 256
     },
     {
       "animation": "walk",
@@ -397,7 +484,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 28,
+      "atlasX": 1024,
+      "atlasY": 256
     },
     {
       "animation": "walk",
@@ -409,7 +499,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 29,
+      "atlasX": 1152,
+      "atlasY": 256
     },
     {
       "animation": "walk",
@@ -421,7 +514,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 30,
+      "atlasX": 0,
+      "atlasY": 384
     },
     {
       "animation": "walk",
@@ -433,7 +529,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 31,
+      "atlasX": 128,
+      "atlasY": 384
     },
     {
       "animation": "walk",
@@ -445,7 +544,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 32,
+      "atlasX": 256,
+      "atlasY": 384
     },
     {
       "animation": "walk",
@@ -457,7 +559,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 33,
+      "atlasX": 384,
+      "atlasY": 384
     },
     {
       "animation": "walk",
@@ -469,7 +574,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 34,
+      "atlasX": 512,
+      "atlasY": 384
     },
     {
       "animation": "walk",
@@ -481,7 +589,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 35,
+      "atlasX": 640,
+      "atlasY": 384
     },
     {
       "animation": "walk",
@@ -493,7 +604,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 36,
+      "atlasX": 768,
+      "atlasY": 384
     },
     {
       "animation": "walk",
@@ -505,7 +619,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 37,
+      "atlasX": 896,
+      "atlasY": 384
     },
     {
       "animation": "walk",
@@ -517,7 +634,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 38,
+      "atlasX": 1024,
+      "atlasY": 384
     },
     {
       "animation": "walk",
@@ -529,7 +649,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 39,
+      "atlasX": 1152,
+      "atlasY": 384
     },
     {
       "animation": "walk",
@@ -541,7 +664,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 40,
+      "atlasX": 0,
+      "atlasY": 512
     },
     {
       "animation": "walk",
@@ -553,7 +679,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 41,
+      "atlasX": 128,
+      "atlasY": 512
     },
     {
       "animation": "walk",
@@ -565,7 +694,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 42,
+      "atlasX": 256,
+      "atlasY": 512
     },
     {
       "animation": "walk",
@@ -577,7 +709,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 43,
+      "atlasX": 384,
+      "atlasY": 512
     },
     {
       "animation": "walk",
@@ -589,7 +724,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 44,
+      "atlasX": 512,
+      "atlasY": 512
     },
     {
       "animation": "walk",
@@ -601,7 +739,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 45,
+      "atlasX": 640,
+      "atlasY": 512
     },
     {
       "animation": "walk",
@@ -613,7 +754,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 46,
+      "atlasX": 768,
+      "atlasY": 512
     },
     {
       "animation": "walk",
@@ -625,7 +769,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 47,
+      "atlasX": 896,
+      "atlasY": 512
     },
     {
       "animation": "walk",
@@ -637,7 +784,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 48,
+      "atlasX": 1024,
+      "atlasY": 512
     },
     {
       "animation": "walk",
@@ -649,7 +799,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 49,
+      "atlasX": 1152,
+      "atlasY": 512
     },
     {
       "animation": "walk",
@@ -661,7 +814,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 50,
+      "atlasX": 0,
+      "atlasY": 640
     },
     {
       "animation": "walk",
@@ -673,7 +829,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 51,
+      "atlasX": 128,
+      "atlasY": 640
     },
     {
       "animation": "walk",
@@ -685,7 +844,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 52,
+      "atlasX": 256,
+      "atlasY": 640
     },
     {
       "animation": "walk",
@@ -697,7 +859,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 53,
+      "atlasX": 384,
+      "atlasY": 640
     },
     {
       "animation": "walk",
@@ -709,7 +874,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 54,
+      "atlasX": 512,
+      "atlasY": 640
     },
     {
       "animation": "walk",
@@ -721,7 +889,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 55,
+      "atlasX": 640,
+      "atlasY": 640
     },
     {
       "animation": "run",
@@ -733,7 +904,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 56,
+      "atlasX": 768,
+      "atlasY": 640
     },
     {
       "animation": "run",
@@ -745,7 +919,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 57,
+      "atlasX": 896,
+      "atlasY": 640
     },
     {
       "animation": "run",
@@ -757,7 +934,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 58,
+      "atlasX": 1024,
+      "atlasY": 640
     },
     {
       "animation": "run",
@@ -769,7 +949,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 59,
+      "atlasX": 1152,
+      "atlasY": 640
     },
     {
       "animation": "run",
@@ -781,7 +964,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 60,
+      "atlasX": 0,
+      "atlasY": 768
     },
     {
       "animation": "run",
@@ -793,7 +979,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 61,
+      "atlasX": 128,
+      "atlasY": 768
     },
     {
       "animation": "run",
@@ -805,7 +994,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 62,
+      "atlasX": 256,
+      "atlasY": 768
     },
     {
       "animation": "run",
@@ -817,7 +1009,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 63,
+      "atlasX": 384,
+      "atlasY": 768
     },
     {
       "animation": "run",
@@ -829,7 +1024,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 64,
+      "atlasX": 512,
+      "atlasY": 768
     },
     {
       "animation": "run",
@@ -841,7 +1039,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 65,
+      "atlasX": 640,
+      "atlasY": 768
     },
     {
       "animation": "run",
@@ -853,7 +1054,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 66,
+      "atlasX": 768,
+      "atlasY": 768
     },
     {
       "animation": "run",
@@ -865,7 +1069,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 67,
+      "atlasX": 896,
+      "atlasY": 768
     },
     {
       "animation": "run",
@@ -877,7 +1084,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 68,
+      "atlasX": 1024,
+      "atlasY": 768
     },
     {
       "animation": "run",
@@ -889,7 +1099,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 69,
+      "atlasX": 1152,
+      "atlasY": 768
     },
     {
       "animation": "run",
@@ -901,7 +1114,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 70,
+      "atlasX": 0,
+      "atlasY": 896
     },
     {
       "animation": "run",
@@ -913,7 +1129,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 71,
+      "atlasX": 128,
+      "atlasY": 896
     },
     {
       "animation": "run",
@@ -925,7 +1144,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 72,
+      "atlasX": 256,
+      "atlasY": 896
     },
     {
       "animation": "run",
@@ -937,7 +1159,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 73,
+      "atlasX": 384,
+      "atlasY": 896
     },
     {
       "animation": "run",
@@ -949,7 +1174,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 74,
+      "atlasX": 512,
+      "atlasY": 896
     },
     {
       "animation": "run",
@@ -961,7 +1189,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 75,
+      "atlasX": 640,
+      "atlasY": 896
     },
     {
       "animation": "run",
@@ -973,7 +1204,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 76,
+      "atlasX": 768,
+      "atlasY": 896
     },
     {
       "animation": "run",
@@ -985,7 +1219,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 77,
+      "atlasX": 896,
+      "atlasY": 896
     },
     {
       "animation": "run",
@@ -997,7 +1234,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 78,
+      "atlasX": 1024,
+      "atlasY": 896
     },
     {
       "animation": "run",
@@ -1009,7 +1249,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 79,
+      "atlasX": 1152,
+      "atlasY": 896
     },
     {
       "animation": "run",
@@ -1021,7 +1264,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 80,
+      "atlasX": 0,
+      "atlasY": 1024
     },
     {
       "animation": "run",
@@ -1033,7 +1279,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 81,
+      "atlasX": 128,
+      "atlasY": 1024
     },
     {
       "animation": "run",
@@ -1045,7 +1294,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 82,
+      "atlasX": 256,
+      "atlasY": 1024
     },
     {
       "animation": "run",
@@ -1057,7 +1309,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 83,
+      "atlasX": 384,
+      "atlasY": 1024
     },
     {
       "animation": "run",
@@ -1069,7 +1324,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 84,
+      "atlasX": 512,
+      "atlasY": 1024
     },
     {
       "animation": "run",
@@ -1081,7 +1339,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 85,
+      "atlasX": 640,
+      "atlasY": 1024
     },
     {
       "animation": "run",
@@ -1093,7 +1354,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 86,
+      "atlasX": 768,
+      "atlasY": 1024
     },
     {
       "animation": "run",
@@ -1105,7 +1369,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": true
+      "loop": true,
+      "atlasIndex": 87,
+      "atlasX": 896,
+      "atlasY": 1024
     },
     {
       "animation": "attack",
@@ -1117,7 +1384,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 88,
+      "atlasX": 1024,
+      "atlasY": 1024
     },
     {
       "animation": "attack",
@@ -1129,7 +1399,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 89,
+      "atlasX": 1152,
+      "atlasY": 1024
     },
     {
       "animation": "attack",
@@ -1141,7 +1414,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 90,
+      "atlasX": 0,
+      "atlasY": 1152
     },
     {
       "animation": "attack",
@@ -1153,7 +1429,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 91,
+      "atlasX": 128,
+      "atlasY": 1152
     },
     {
       "animation": "attack",
@@ -1165,7 +1444,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 92,
+      "atlasX": 256,
+      "atlasY": 1152
     },
     {
       "animation": "attack",
@@ -1177,7 +1459,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 93,
+      "atlasX": 384,
+      "atlasY": 1152
     },
     {
       "animation": "attack",
@@ -1189,7 +1474,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 94,
+      "atlasX": 512,
+      "atlasY": 1152
     },
     {
       "animation": "attack",
@@ -1201,7 +1489,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 95,
+      "atlasX": 640,
+      "atlasY": 1152
     },
     {
       "animation": "attack",
@@ -1213,7 +1504,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 96,
+      "atlasX": 768,
+      "atlasY": 1152
     },
     {
       "animation": "attack",
@@ -1225,7 +1519,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 97,
+      "atlasX": 896,
+      "atlasY": 1152
     },
     {
       "animation": "attack",
@@ -1237,7 +1534,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 98,
+      "atlasX": 1024,
+      "atlasY": 1152
     },
     {
       "animation": "attack",
@@ -1249,7 +1549,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 99,
+      "atlasX": 1152,
+      "atlasY": 1152
     },
     {
       "animation": "attack",
@@ -1261,7 +1564,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 100,
+      "atlasX": 0,
+      "atlasY": 1280
     },
     {
       "animation": "attack",
@@ -1273,7 +1579,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 101,
+      "atlasX": 128,
+      "atlasY": 1280
     },
     {
       "animation": "attack",
@@ -1285,7 +1594,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 102,
+      "atlasX": 256,
+      "atlasY": 1280
     },
     {
       "animation": "attack",
@@ -1297,7 +1609,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 103,
+      "atlasX": 384,
+      "atlasY": 1280
     },
     {
       "animation": "attack",
@@ -1309,7 +1624,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 104,
+      "atlasX": 512,
+      "atlasY": 1280
     },
     {
       "animation": "attack",
@@ -1321,7 +1639,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 105,
+      "atlasX": 640,
+      "atlasY": 1280
     },
     {
       "animation": "attack",
@@ -1333,7 +1654,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 106,
+      "atlasX": 768,
+      "atlasY": 1280
     },
     {
       "animation": "attack",
@@ -1345,7 +1669,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 107,
+      "atlasX": 896,
+      "atlasY": 1280
     },
     {
       "animation": "attack",
@@ -1357,7 +1684,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 108,
+      "atlasX": 1024,
+      "atlasY": 1280
     },
     {
       "animation": "attack",
@@ -1369,7 +1699,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 109,
+      "atlasX": 1152,
+      "atlasY": 1280
     },
     {
       "animation": "attack",
@@ -1381,7 +1714,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 110,
+      "atlasX": 0,
+      "atlasY": 1408
     },
     {
       "animation": "attack",
@@ -1393,7 +1729,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 111,
+      "atlasX": 128,
+      "atlasY": 1408
     },
     {
       "animation": "attack",
@@ -1405,7 +1744,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 112,
+      "atlasX": 256,
+      "atlasY": 1408
     },
     {
       "animation": "attack",
@@ -1417,7 +1759,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 113,
+      "atlasX": 384,
+      "atlasY": 1408
     },
     {
       "animation": "attack",
@@ -1429,7 +1774,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 114,
+      "atlasX": 512,
+      "atlasY": 1408
     },
     {
       "animation": "attack",
@@ -1441,7 +1789,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 115,
+      "atlasX": 640,
+      "atlasY": 1408
     },
     {
       "animation": "attack",
@@ -1453,7 +1804,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 116,
+      "atlasX": 768,
+      "atlasY": 1408
     },
     {
       "animation": "attack",
@@ -1465,7 +1819,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 117,
+      "atlasX": 896,
+      "atlasY": 1408
     },
     {
       "animation": "attack",
@@ -1477,7 +1834,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 118,
+      "atlasX": 1024,
+      "atlasY": 1408
     },
     {
       "animation": "attack",
@@ -1489,7 +1849,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 119,
+      "atlasX": 1152,
+      "atlasY": 1408
     },
     {
       "animation": "echoCast",
@@ -1501,7 +1864,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 120,
+      "atlasX": 0,
+      "atlasY": 1536
     },
     {
       "animation": "echoCast",
@@ -1513,7 +1879,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 121,
+      "atlasX": 128,
+      "atlasY": 1536
     },
     {
       "animation": "echoCast",
@@ -1525,7 +1894,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 122,
+      "atlasX": 256,
+      "atlasY": 1536
     },
     {
       "animation": "echoCast",
@@ -1537,7 +1909,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 123,
+      "atlasX": 384,
+      "atlasY": 1536
     },
     {
       "animation": "echoCast",
@@ -1549,7 +1924,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 124,
+      "atlasX": 512,
+      "atlasY": 1536
     },
     {
       "animation": "echoCast",
@@ -1561,7 +1939,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 125,
+      "atlasX": 640,
+      "atlasY": 1536
     },
     {
       "animation": "echoCast",
@@ -1573,7 +1954,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 126,
+      "atlasX": 768,
+      "atlasY": 1536
     },
     {
       "animation": "echoCast",
@@ -1585,7 +1969,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 127,
+      "atlasX": 896,
+      "atlasY": 1536
     },
     {
       "animation": "echoCast",
@@ -1597,7 +1984,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 128,
+      "atlasX": 1024,
+      "atlasY": 1536
     },
     {
       "animation": "echoCast",
@@ -1609,7 +1999,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 129,
+      "atlasX": 1152,
+      "atlasY": 1536
     },
     {
       "animation": "echoCast",
@@ -1621,7 +2014,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 130,
+      "atlasX": 0,
+      "atlasY": 1664
     },
     {
       "animation": "echoCast",
@@ -1633,7 +2029,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 131,
+      "atlasX": 128,
+      "atlasY": 1664
     },
     {
       "animation": "echoCast",
@@ -1645,7 +2044,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 132,
+      "atlasX": 256,
+      "atlasY": 1664
     },
     {
       "animation": "echoCast",
@@ -1657,7 +2059,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 133,
+      "atlasX": 384,
+      "atlasY": 1664
     },
     {
       "animation": "echoCast",
@@ -1669,7 +2074,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 134,
+      "atlasX": 512,
+      "atlasY": 1664
     },
     {
       "animation": "echoCast",
@@ -1681,7 +2089,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 135,
+      "atlasX": 640,
+      "atlasY": 1664
     },
     {
       "animation": "echoCast",
@@ -1693,7 +2104,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 136,
+      "atlasX": 768,
+      "atlasY": 1664
     },
     {
       "animation": "echoCast",
@@ -1705,7 +2119,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 137,
+      "atlasX": 896,
+      "atlasY": 1664
     },
     {
       "animation": "echoCast",
@@ -1717,7 +2134,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 138,
+      "atlasX": 1024,
+      "atlasY": 1664
     },
     {
       "animation": "echoCast",
@@ -1729,7 +2149,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 139,
+      "atlasX": 1152,
+      "atlasY": 1664
     },
     {
       "animation": "echoCast",
@@ -1741,7 +2164,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 140,
+      "atlasX": 0,
+      "atlasY": 1792
     },
     {
       "animation": "echoCast",
@@ -1753,7 +2179,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 141,
+      "atlasX": 128,
+      "atlasY": 1792
     },
     {
       "animation": "echoCast",
@@ -1765,7 +2194,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 142,
+      "atlasX": 256,
+      "atlasY": 1792
     },
     {
       "animation": "echoCast",
@@ -1777,7 +2209,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 143,
+      "atlasX": 384,
+      "atlasY": 1792
     },
     {
       "animation": "echoCast",
@@ -1789,7 +2224,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 144,
+      "atlasX": 512,
+      "atlasY": 1792
     },
     {
       "animation": "echoCast",
@@ -1801,7 +2239,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 145,
+      "atlasX": 640,
+      "atlasY": 1792
     },
     {
       "animation": "echoCast",
@@ -1813,7 +2254,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 146,
+      "atlasX": 768,
+      "atlasY": 1792
     },
     {
       "animation": "echoCast",
@@ -1825,7 +2269,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 147,
+      "atlasX": 896,
+      "atlasY": 1792
     },
     {
       "animation": "echoCast",
@@ -1837,7 +2284,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 148,
+      "atlasX": 1024,
+      "atlasY": 1792
     },
     {
       "animation": "echoCast",
@@ -1849,7 +2299,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 149,
+      "atlasX": 1152,
+      "atlasY": 1792
     },
     {
       "animation": "echoCast",
@@ -1861,7 +2314,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 150,
+      "atlasX": 0,
+      "atlasY": 1920
     },
     {
       "animation": "echoCast",
@@ -1873,7 +2329,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 151,
+      "atlasX": 128,
+      "atlasY": 1920
     },
     {
       "animation": "echoCast",
@@ -1885,7 +2344,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 152,
+      "atlasX": 256,
+      "atlasY": 1920
     },
     {
       "animation": "echoCast",
@@ -1897,7 +2359,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 153,
+      "atlasX": 384,
+      "atlasY": 1920
     },
     {
       "animation": "echoCast",
@@ -1909,7 +2374,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 154,
+      "atlasX": 512,
+      "atlasY": 1920
     },
     {
       "animation": "echoCast",
@@ -1921,7 +2389,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 155,
+      "atlasX": 640,
+      "atlasY": 1920
     },
     {
       "animation": "echoCast",
@@ -1933,7 +2404,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 156,
+      "atlasX": 768,
+      "atlasY": 1920
     },
     {
       "animation": "echoCast",
@@ -1945,7 +2419,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 157,
+      "atlasX": 896,
+      "atlasY": 1920
     },
     {
       "animation": "echoCast",
@@ -1957,7 +2434,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 158,
+      "atlasX": 1024,
+      "atlasY": 1920
     },
     {
       "animation": "echoCast",
@@ -1969,7 +2449,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 10,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 159,
+      "atlasX": 1152,
+      "atlasY": 1920
     },
     {
       "animation": "interact",
@@ -1981,7 +2464,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 160,
+      "atlasX": 0,
+      "atlasY": 2048
     },
     {
       "animation": "interact",
@@ -1993,7 +2479,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 161,
+      "atlasX": 128,
+      "atlasY": 2048
     },
     {
       "animation": "interact",
@@ -2005,7 +2494,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 162,
+      "atlasX": 256,
+      "atlasY": 2048
     },
     {
       "animation": "interact",
@@ -2017,7 +2509,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 163,
+      "atlasX": 384,
+      "atlasY": 2048
     },
     {
       "animation": "interact",
@@ -2029,7 +2524,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 164,
+      "atlasX": 512,
+      "atlasY": 2048
     },
     {
       "animation": "interact",
@@ -2041,7 +2539,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 165,
+      "atlasX": 640,
+      "atlasY": 2048
     },
     {
       "animation": "interact",
@@ -2053,7 +2554,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 166,
+      "atlasX": 768,
+      "atlasY": 2048
     },
     {
       "animation": "interact",
@@ -2065,7 +2569,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 167,
+      "atlasX": 896,
+      "atlasY": 2048
     },
     {
       "animation": "interact",
@@ -2077,7 +2584,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 168,
+      "atlasX": 1024,
+      "atlasY": 2048
     },
     {
       "animation": "interact",
@@ -2089,7 +2599,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 169,
+      "atlasX": 1152,
+      "atlasY": 2048
     },
     {
       "animation": "interact",
@@ -2101,7 +2614,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 170,
+      "atlasX": 0,
+      "atlasY": 2176
     },
     {
       "animation": "interact",
@@ -2113,7 +2629,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 171,
+      "atlasX": 128,
+      "atlasY": 2176
     },
     {
       "animation": "interact",
@@ -2125,7 +2644,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 172,
+      "atlasX": 256,
+      "atlasY": 2176
     },
     {
       "animation": "interact",
@@ -2137,7 +2659,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 173,
+      "atlasX": 384,
+      "atlasY": 2176
     },
     {
       "animation": "interact",
@@ -2149,7 +2674,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 174,
+      "atlasX": 512,
+      "atlasY": 2176
     },
     {
       "animation": "interact",
@@ -2161,7 +2689,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 175,
+      "atlasX": 640,
+      "atlasY": 2176
     },
     {
       "animation": "interact",
@@ -2173,7 +2704,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 176,
+      "atlasX": 768,
+      "atlasY": 2176
     },
     {
       "animation": "interact",
@@ -2185,7 +2719,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 177,
+      "atlasX": 896,
+      "atlasY": 2176
     },
     {
       "animation": "interact",
@@ -2197,7 +2734,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 178,
+      "atlasX": 1024,
+      "atlasY": 2176
     },
     {
       "animation": "interact",
@@ -2209,7 +2749,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 179,
+      "atlasX": 1152,
+      "atlasY": 2176
     },
     {
       "animation": "interact",
@@ -2221,7 +2764,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 180,
+      "atlasX": 0,
+      "atlasY": 2304
     },
     {
       "animation": "interact",
@@ -2233,7 +2779,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 181,
+      "atlasX": 128,
+      "atlasY": 2304
     },
     {
       "animation": "interact",
@@ -2245,7 +2794,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 182,
+      "atlasX": 256,
+      "atlasY": 2304
     },
     {
       "animation": "interact",
@@ -2257,7 +2809,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 8,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 183,
+      "atlasX": 384,
+      "atlasY": 2304
     },
     {
       "animation": "hit",
@@ -2269,7 +2824,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 184,
+      "atlasX": 512,
+      "atlasY": 2304
     },
     {
       "animation": "hit",
@@ -2281,7 +2839,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 185,
+      "atlasX": 640,
+      "atlasY": 2304
     },
     {
       "animation": "hit",
@@ -2293,7 +2854,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 186,
+      "atlasX": 768,
+      "atlasY": 2304
     },
     {
       "animation": "hit",
@@ -2305,7 +2869,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 187,
+      "atlasX": 896,
+      "atlasY": 2304
     },
     {
       "animation": "hit",
@@ -2317,7 +2884,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 188,
+      "atlasX": 1024,
+      "atlasY": 2304
     },
     {
       "animation": "hit",
@@ -2329,7 +2899,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 189,
+      "atlasX": 1152,
+      "atlasY": 2304
     },
     {
       "animation": "hit",
@@ -2341,7 +2914,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 190,
+      "atlasX": 0,
+      "atlasY": 2432
     },
     {
       "animation": "hit",
@@ -2353,7 +2929,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 191,
+      "atlasX": 128,
+      "atlasY": 2432
     },
     {
       "animation": "hit",
@@ -2365,7 +2944,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 192,
+      "atlasX": 256,
+      "atlasY": 2432
     },
     {
       "animation": "hit",
@@ -2377,7 +2959,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 193,
+      "atlasX": 384,
+      "atlasY": 2432
     },
     {
       "animation": "hit",
@@ -2389,7 +2974,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 194,
+      "atlasX": 512,
+      "atlasY": 2432
     },
     {
       "animation": "hit",
@@ -2401,7 +2989,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 195,
+      "atlasX": 640,
+      "atlasY": 2432
     },
     {
       "animation": "hit",
@@ -2413,7 +3004,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 196,
+      "atlasX": 768,
+      "atlasY": 2432
     },
     {
       "animation": "hit",
@@ -2425,7 +3019,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 197,
+      "atlasX": 896,
+      "atlasY": 2432
     },
     {
       "animation": "hit",
@@ -2437,7 +3034,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 198,
+      "atlasX": 1024,
+      "atlasY": 2432
     },
     {
       "animation": "hit",
@@ -2449,7 +3049,10 @@
       "pivotX": 64,
       "pivotY": 116,
       "fps": 12,
-      "loop": false
+      "loop": false,
+      "atlasIndex": 199,
+      "atlasX": 1152,
+      "atlasY": 2432
     }
   ]
 }
