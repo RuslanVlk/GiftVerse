@@ -93,5 +93,28 @@
       "pivotY"
     ]
   },
-  "status": "specification-only; source sprite frames have not yet been generated or integrated"
+  "status": "partial-source-frames-preserved; isolated preview added; complete animation set and game integration pending",
+  "sourceAssets": {
+    "origin": "Existing frames extracted from the prior GiftVerse-Playtest prototype",
+    "file": "researcher-assets.js",
+    "preview": "preview.html",
+    "availableAnimations": [
+      "idle",
+      "attack"
+    ],
+    "directionsAvailable": [
+      "down"
+    ],
+    "notAvailableYet": [
+      "walk",
+      "run",
+      "echoCast",
+      "interact",
+      "hit",
+      "left-facing",
+      "right-facing",
+      "up-facing"
+    ],
+    "note": "Existing source frames only; the complete production sprite set is not finished."
+  }
 }
