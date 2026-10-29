@@ -1,0 +1,36 @@
+name: Validate GiftVerse hero assets
+
+on:
+  push:
+    paths:
+      - "assets/characters/researcher/**"
+      - "tools/validate-hero-assets.mjs"
+      - "tools/validate-researcher-source.mjs"
+      - ".github/workflows/validate-hero-assets.yml"
+  pull_request:
+    paths:
+      - "assets/characters/researcher/**"
+      - "tools/validate-hero-assets.mjs"
+      - "tools/validate-researcher-source.mjs"
+      - ".github/workflows/validate-hero-assets.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "22"
+      - name: Validate embedded researcher frames
+        run: node tools/validate-researcher-source.mjs
+      - name: Check ES module syntax
+        run: node --input-type=module --check < assets/characters/researcher/researcher-assets.js
