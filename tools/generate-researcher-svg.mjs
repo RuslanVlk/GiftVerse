@@ -44,10 +44,12 @@ function buildFrame({direction="down",pose="idle",frame=0}={}){
  if(pose==="interact") body=`<g transform="translate(0 3)">${body}</g>`;
  if(pose==="attack") body=`<g transform="translate(${flip?-arm:arm} 0)">${body}</g>`;
  if(pose==="hit") body=`<g transform="translate(${frame%2?2:-2} 0)">${body}</g>`;
+ if(pose==="death") body=`<g opacity="${Math.max(.38,1-frame*.07)}" transform="translate(64 78) rotate(${frame*8}) translate(-64 -78)">${body}</g>`;
+ if(pose==="menuEnter") body=`<g opacity="${Math.min(1,.35+frame*.1)}">${body}<g fill="none" stroke="#72eaff" stroke-width="1.3" opacity="${Math.min(.9,.25+frame*.09)}"><ellipse cx="64" cy="112" rx="${22+frame*2}" ry="${5+frame*.35}"/><path d="M64 106 L64 ${78-frame*2} M49 104 L43 ${91-frame} M79 104 L85 ${91-frame}"/></g></g>`;
  const shadow=`<ellipse cx="64" cy="116" rx="19" ry="4" fill="#000" opacity=".18"/>`;
  return svgWrap(shadow+body,`Researcher ${direction} ${pose} frame ${frame}`);
 }
-const specs={idle:{count:6,fps:6,loop:true},walk:{count:8,fps:10,loop:true},run:{count:8,fps:12,loop:true},attack:{count:8,fps:12,loop:false},echoCast:{count:10,fps:10,loop:false},interact:{count:6,fps:8,loop:false},hit:{count:4,fps:12,loop:false}};
+const specs={idle:{count:6,fps:6,loop:true},walk:{count:8,fps:10,loop:true},run:{count:8,fps:12,loop:true},attack:{count:8,fps:12,loop:false},echoCast:{count:10,fps:10,loop:false},interact:{count:6,fps:8,loop:false},menuEnter:{count:8,fps:10,loop:false},hit:{count:4,fps:12,loop:false},death:{count:8,fps:8,loop:false}};
 const directions=["down","left","right","up"];
 for(const direction of directions)for(const [pose,spec] of Object.entries(specs))for(let frame=0;frame<spec.count;frame++){
  const file=path.join(OUT,"frames",pose,direction,`${String(frame).padStart(2,"0")}.svg`);
