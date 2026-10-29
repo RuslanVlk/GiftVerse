@@ -1,0 +1,39 @@
+name: Deploy GiftVerse playtest
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "assets/characters/researcher/**"
+      - ".github/workflows/deploy-playtest.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b
+      - name: Upload playtest site
+        uses: actions/upload-pages-artifact@7b1f4a764d45d2f9f8c4a6c5d5d8b4f1c0f2b7a9
+        with:
+          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
