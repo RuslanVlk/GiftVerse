@@ -40,6 +40,15 @@ if (atlas.frameHeight !== manifest.rendering.frameHeight) fail(`frameHeight must
 const imagePath = atlas.image ? path.resolve(path.dirname(atlasPath), atlas.image) : null;
 if (!imagePath || !fs.existsSync(imagePath)) fail(`Atlas image is missing: ${atlas.image ?? "(no image field)"}`);
 
+const sourceOnly = atlas.sourceOnly === true;
+if (sourceOnly) {
+  if (!Array.isArray(atlas.availableAnimations) || !atlas.availableAnimations.length) {
+    fail("Source-only atlas must declare availableAnimations.");
+  }
+  if (!Array.isArray(atlas.availableDirections) || !atlas.availableDirections.length) {
+    fail("Source-only atlas must declare availableDirections.");
+  }
+}
 if (frames) {
   const keys = new Set();
   for (const frame of frames) {
@@ -57,8 +66,14 @@ if (frames) {
       fail(`Frame ${key} has inconsistent pivot; expected (${manifest.rendering.pivot.x}, ${manifest.rendering.pivot.y})`);
     }
   }
-  for (const [animation, spec] of Object.entries(manifest.animations)) {
-    for (const direction of manifest.rendering.directions) {
+  const animationsToCheck = sourceOnly
+    ? Object.fromEntries(Object.entries(manifest.animations).filter(([name]) => atlas.availableAnimations.includes(name)))
+    : manifest.animations;
+  const directionsToCheck = sourceOnly
+    ? atlas.availableDirections
+    : manifest.rendering.directions;
+  for (const [animation, spec] of Object.entries(animationsToCheck)) {
+    for (const direction of directionsToCheck) {
       for (let index = 0; index < spec.frames; index++) {
         if (!keys.has(`${animation}/${direction}/${index}`)) {
           fail(`Missing frame: ${animation}/${direction}/${index}`);
@@ -66,10 +81,18 @@ if (frames) {
       }
     }
   }
+  if (sourceOnly) {
+    const missingAnimations = Object.keys(manifest.animations).filter(name => !atlas.availableAnimations.includes(name));
+    const missingDirections = manifest.rendering.directions.filter(name => !atlas.availableDirections.includes(name));
+    if (missingAnimations.length) warnings.push(`Source atlas is incomplete; animations not included: ${missingAnimations.join(", ")}.`);
+    if (missingDirections.length) warnings.push(`Source atlas is incomplete; directions not included: ${missingDirections.join(", ")}.`);
+  }
 }
 if (errors.length) {
   console.error(`Hero atlas validation failed (${errors.length} error(s)):\n- ${errors.join("\n- ")}`);
   process.exit(1);
 }
-console.log(`Hero atlas valid: ${frames.length} frames across ${Object.keys(manifest.animations).length} animation states.`);
+console.log(sourceOnly
+  ? `Researcher source atlas valid: ${frames.length} verified source frames. This is not a complete production atlas.`
+  : `Hero atlas valid: ${frames.length} frames across ${Object.keys(manifest.animations).length} animation states.`);
 if (warnings.length) console.warn(warnings.join("\n"));
