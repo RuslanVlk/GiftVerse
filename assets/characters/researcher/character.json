@@ -90,8 +90,9 @@
     }
   },
   "delivery": {
-    "format": "SVG atlas plus JSON metadata",
-    "image": "procedural/researcher-atlas.svg",
+    "format": "PNG atlas plus JSON metadata, with individual SVG source frames",
+    "image": "procedural/researcher-atlas.png",
+    "sourceAtlas": "procedural/researcher-atlas.svg",
     "atlas": "procedural/researcher-atlas.json",
     "perFrameDirectory": "procedural/frames/",
     "frameSize": "128x128",
