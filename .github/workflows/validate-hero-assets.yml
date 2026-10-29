@@ -61,7 +61,7 @@ jobs:
         with:
           commit_message: "Build procedural researcher SVG animation frames"
           file_pattern: "assets/characters/researcher/procedural/frames/** assets/characters/researcher/procedural/manifest.json assets/characters/researcher/procedural/researcher-atlas.json assets/characters/researcher/procedural/researcher-atlas.svg assets/characters/researcher/procedural/BUILD-INFO.txt"
-      - name: Validate embedded researcher frames
+      - name: Validate procedural-only researcher workflow
         run: node tools/validate-researcher-source.mjs
       - name: Check ES module syntax
         run: node --input-type=module --check < assets/characters/researcher/researcher-assets.js
