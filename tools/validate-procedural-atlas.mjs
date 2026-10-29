@@ -41,6 +41,6 @@ for(const [animation,spec] of Object.entries(manifest.animations)){
 for(const state of Object.keys(manifest.animations)){
  if(!game.includes(`'${state}'`)&&!game.includes(`"${state}"`))errors.push(`Runtime does not reference animation state ${state}.`);
 }
-if(!game.includes("researcher-atlas.svg")||!game.includes("ctx.drawImage(proceduralAtlas"))errors.push("Runtime atlas renderer is not connected.");
+if(!game.includes("researcher-atlas.png")||!game.includes("ctx.drawImage(proceduralAtlas"))errors.push("Runtime PNG atlas renderer is not connected.");
 if(errors.length){console.error("Procedural atlas validation failed:\\n- "+errors.join("\\n- "));process.exit(1);}
 console.log(`Procedural atlas validation passed: ${expected} frames, ${Object.keys(manifest.animations).length} states, ${manifest.directions.length} directions; runtime atlas integration verified.`);
