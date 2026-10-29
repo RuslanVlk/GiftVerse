@@ -4,5 +4,5 @@ Atlas: researcher-atlas.svg (10 columns x 27 rows)
 Canvas: 128x128, transparent background
 Pivot: (64,116)
 Preview: preview.html
-
-This is an initial procedural geometry pass, not final reference-matched art. Review silhouette, face, coat, equipment and animation before live game integration.
+Runtime: integrated into the playable GiftVerse HTML prototype
+Art status: procedural vector pass with costume, gear, book, face details and pose-specific motion; still requires visual review against the supplied reference before production sign-off.
