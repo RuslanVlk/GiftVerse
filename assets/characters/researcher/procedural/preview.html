@@ -8,10 +8,10 @@
 <p>Самостоятельно генерируемые SVG-кадры. Никакие готовые картинки или вырезанные изображения не используются в этом наборе. Это технический первый проход, а не финальная художественная версия.</p>
 <section class="panel"><div class="controls"><label>Анимация <select id="animation"></select></label><label>Направление <select id="direction"><option value="down">Вниз</option><option value="left">Влево</option><option value="right">Вправо</option><option value="up">Вверх</option></select></label><label>FPS <select id="fps"><option>4</option><option>6</option><option selected>10</option><option>12</option><option>16</option></select></label><button id="toggle">Пауза</button><button id="prev">← Кадр</button><button id="next">Кадр →</button></div>
 <canvas id="view" width="512" height="512"></canvas><div class="frames" id="frames"></div><p id="status" class="muted"></p><div class="controls"><a href="manifest.json" download>Скачать manifest.json</a><button id="download">Скачать текущий SVG</button></div></section>
-<section class="panel"><h2>Состояние конвейера</h2><p>128×128 SVG · прозрачный фон · pivot (64, 116) · 4 направления · 7 состояний анимации.</p><p>Перед использованием в игре требуется художественная проверка соответствия референсу. Геометрическая модель создана программно и не должна считаться финальным арт-ассетом.</p></section>
+<section class="panel"><h2>Состояние конвейера</h2><p>128×128 SVG · прозрачный фон · pivot (64, 116) · 4 направления · 9 состояний анимации.</p><p>Перед использованием в игре требуется художественная проверка соответствия референсу. Геометрическая модель создана программно и не должна считаться финальным арт-ассетом.</p></section>
 </main><script>
-const animations={idle:6,walk:8,run:8,attack:8,echoCast:10,interact:6,hit:4};
-const labels={idle:"Idle — ожидание",walk:"Walk — ходьба",run:"Run — бег",attack:"Attack — атака",echoCast:"EchoCast — поиск следов",interact:"Interact — взаимодействие",hit:"Hit — получение урона"};
+const animations={idle:6,walk:8,run:8,attack:8,echoCast:10,interact:6,menuEnter:8,hit:4,death:8};
+const labels={idle:"Idle — ожидание",walk:"Walk — ходьба",run:"Run — бег",attack:"Attack — атака",echoCast:"EchoCast — поиск следов",interact:"Interact — взаимодействие",menuEnter:"MenuEnter — вход в меню",hit:"Hit — получение урона",death:"Death — смерть"};
 const $=id=>document.getElementById(id);let frame=0,playing=true,last=0,raf=0;
 for(const [key,count] of Object.entries(animations))$("animation").add(new Option(labels[key],key));
 function url(){return "frames/"+$("animation").value+"/"+$("direction").value+"/"+String(frame).padStart(2,"0")+".svg"}
