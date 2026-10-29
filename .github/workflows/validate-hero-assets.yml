@@ -3,6 +3,8 @@ name: Validate GiftVerse hero assets
 on:
   push:
     paths:
+      - "index.html"
+      - "tools/validate-game-script.mjs"
       - "assets/characters/researcher/**"
       - "tools/validate-hero-assets.mjs"
       - "tools/validate-researcher-source.mjs"
@@ -30,6 +32,8 @@ jobs:
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: "22"
+      - name: Validate playable game script syntax
+        run: node tools/validate-game-script.mjs
       - name: Validate embedded researcher frames
         run: node tools/validate-researcher-source.mjs
       - name: Check ES module syntax
