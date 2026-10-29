@@ -30,3 +30,10 @@ Exports from the preview are explicitly marked `sourceOnly: true`. They are usef
 GitHub Actions checks the embedded source frames, ES module syntax, and the inline JavaScript syntax in the playable prototype.
 
 The checks confirm code and source-data integrity; they do not claim that the missing production animation frames have been completed or that visual gameplay has been manually verified on every device.
+
+
+## Procedural researcher generator
+
+A new first-pass procedural character pipeline is available in `tools/generate-researcher-svg.mjs`. It generates original SVG frames from code rather than cropping the supplied reference image. The output is stored under `assets/characters/researcher/procedural/` and includes seven animation states, four directions, a manifest, and a browser preview.
+
+This is a technical starting point, not final production-quality character art. Review the procedural preview against the supplied reference before integrating it into the live game.
