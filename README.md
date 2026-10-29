@@ -41,4 +41,6 @@ GitHub Actions validates the inline game JavaScript, generates the procedural fr
 
 ## Test deployment
 
+The Pages deployment workflow is configured to publish this repository automatically after updates to the game, procedural character assets, or this README.
+
 The repository includes a GitHub Pages workflow. GitHub Pages is not yet enabled for this repository; the workflow cannot enable it automatically with the current GitHub App permissions. Once Pages is enabled in repository Settings → Pages with source set to GitHub Actions, the workflow can publish the browser test build.
